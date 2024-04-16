@@ -3,7 +3,7 @@ router.all(/^\/acl\/(.*)$/, async(req, res, next) => {
 	
 	const title = req.params[0];
 	const doc = processTitle(title);
-	if(['특수기능', '투표', '토론'].includes(doc.namespace) || !doc.title) return res.status(400).send(await showError(req, '문서 이름이 올바르지 않습니다.', 1));
+	if(['특수기능', '토론'].includes(doc.namespace) || !doc.title) return res.status(400).send(await showError(req, '문서 이름이 올바르지 않습니다.', 1));
 	if(ver('4.2.0')) {
 		await curs.execute("delete from acl where not expiration = '0' and cast(expiration as integer) < ?", [getTime()]);
 		const aclmsg = await getacl(req, doc.title, doc.namespace, 'acl');

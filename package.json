@@ -2,8 +2,8 @@
   "engines": {
     "node": "12"
   },
-  "name": "imitated-seed-v2",
-  "version": "4.12.0",
+  "name": "Open-seed-v1",
+  "version": "0.00.1",
   "description": "더 시드 모방 엔진.",
   "main": "server.js",
   "dependencies": {

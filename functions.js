@@ -909,6 +909,7 @@ const aclperms = {
 	contributor: (ver('4.7.0') ? '위키 기여자' : undefined),
 	match_username_and_document_title: (ver('4.5.9') ? '문서 제목과 사용자 이름이 일치' : undefined),
 	ip: (ver('4.20.0') ? '아이피' : undefined),
+	grant: 'grant',
 };
 
 // 차단된 사용자 제외 ACL 권한

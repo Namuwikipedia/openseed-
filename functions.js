@@ -99,20 +99,10 @@ var perms = [
 	'hide_document_history_log', 'delete_thread', 'admin', 'editable_other_user_document', 'suspend_account', 'ipacl', 
 	'update_thread_status', 'acl', 'nsacl', 'hide_thread_comment', 'grant', 'no_force_recaptcha', 
 	'disable_two_factor_login', 'login_history', 'update_thread_document', 'update_thread_topic', 
-	'aclgroup', 'api_access', 
+	'aclgroup', 'api_access', 'developer'
 ];
 var disable_autoperms = ['disable_two_factor_login'];
 
-if(ver('4.18.0')) perms.remove('ipacl'), perms.remove('suspend_account');
-else perms.remove('aclgroup');
-if(ver('4.2.0')) perms.remove('acl');
-if(!ver('4.20.0')) perms.remove('api_access');
-if(!ver('4.4.1')) perms.remove('disable_two_factor_login');
-if(!ver('4.4.2')) perms.remove('login_history');
-if(!ver('4.22.4')) perms.remove('hide_document_history_log');
-if(ver('4.18.0')) perms.remove('editable_other_user_document');
-if(!ver('4.4.3')) { perms.remove('update_thread_document'); perms.remove('update_thread_topic'); }
-if(!ver('4.0.20')) perms.push('developer', 'tribune', 'arbiter');
 if(hostconfig.debug) perms.push('debug');
 
 // 삐
@@ -903,12 +893,12 @@ const aclperms = {
 	member: '로그인된 사용자',
 	admin: '관리자',
 	member_signup_15days_ago: '가입한지 15일 지난 사용자',
-	suspend_account: (ver('4.18.0') ? undefined : '차단된 사용자'),
-	blocked_ipacl: (ver('4.18.0') ? undefined : '차단된 아이피'),
+	suspend_account: '차단된 사용자',
+	blocked_ipacl: '차단된 아이피',
 	document_contributor: '해당 문서 기여자',
-	contributor: (ver('4.7.0') ? '위키 기여자' : undefined),
-	match_username_and_document_title: (ver('4.5.9') ? '문서 제목과 사용자 이름이 일치' : undefined),
-	ip: (ver('4.20.0') ? '아이피' : undefined),
+	contributor: '위키 기여자'
+	match_username_and_document_title: '문서 제목과 사용자 이름이 일치',
+	ip: '아이피',
 	grant: 'grant',
 	aclgroup: 'aclgroup',
 	api_aсcess: 'api_acсess',

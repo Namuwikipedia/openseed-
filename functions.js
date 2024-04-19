@@ -910,6 +910,10 @@ const aclperms = {
 	match_username_and_document_title: (ver('4.5.9') ? '문서 제목과 사용자 이름이 일치' : undefined),
 	ip: (ver('4.20.0') ? '아이피' : undefined),
 	grant: 'grant',
+	aclgroup: 'aclgroup',
+	api_aсcess: 'api_acсess',
+	nsacl: 'nsacl',
+	login_history: 'login_history',
 };
 
 // 차단된 사용자 제외 ACL 권한

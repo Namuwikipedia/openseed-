@@ -914,6 +914,7 @@ const aclperms = {
 	api_aсcess: 'api_acсess',
 	nsacl: 'nsacl',
 	login_history: 'login_history',
+	developer: '개발자',
 };
 
 // 차단된 사용자 제외 ACL 권한
@@ -988,7 +989,7 @@ function alertBalloon(content, type = 'danger', dismissible = true, classes = ''
 
 // 이름공간 목록
 function fetchNamespaces() {
-	return ['문서', '틀', '분류', '파일', '사용자', '특수기능', config.getString('wiki.site_name', '더 시드'), '토론', '휴지통', '투표'].concat(hostconfig.custom_namespaces || []);
+	return ['문서', '틀', '분류', '파일', '사용자', '특수기능', config.getString('wiki.site_name', '더 시드'), '토론', '휴지통', '투표', '위키관리', '템플릿', '더미'].concat(hostconfig.custom_namespaces || []);
 }
 
 function err(type, obj) {

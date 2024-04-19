@@ -1,6 +1,6 @@
 router.get(/^\/License$/, async(req, res) => {
 	var licepage = `
-		<p>imitated-seed</p>
+		<p>open-seed</p>
 		<p>(the seed v${version.major}.${version.minor}.${version.revision})</p>
 	`;
 	

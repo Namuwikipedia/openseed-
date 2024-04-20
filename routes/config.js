@@ -96,44 +96,7 @@ router.all(/^\/admin\/config$/, async(req, res, next) => {
 				<label class=control-label>the seed 버전</label>
 				<select class=form-control name=theseed_version>
 					${tsver('사용자 지정')}
-					${tsver('4.0.19')}
-					${tsver('4.0.20')}
-					${tsver('4.0.21')}
-					${tsver('4.1.0')}
-					${tsver('4.1.8')}
-					${tsver('4.2.0')}
-					${tsver('4.2.2')}
-					${tsver('4.2.4')}
-					${tsver('4.3.1')}
-					${tsver('4.4.0')}
-					${tsver('4.4.1')}
-					${tsver('4.4.2')}
-					${tsver('4.4.3')}
-					${tsver('4.5.0')}
-					${tsver('4.5.5')}
-					${tsver('4.5.7')}
-					${tsver('4.5.9')}
-					${tsver('4.6.0')}
-					${tsver('4.7.0')}
-					${tsver('4.7.1')}
-					${tsver('4.7.2')}
-					${tsver('4.7.3')}
-					${tsver('4.7.5')}
-					${tsver('4.9.0')}
-					${tsver('4.10.3')}
-					${tsver('4.11.0')}
-					${tsver('4.11.3')}
-					${tsver('4.12.0')}
-					${tsver('4.16.0')}
-					${tsver('4.17.2')}
-					${tsver('4.18.0')}
-					${tsver('4.18.6')}
-					${tsver('4.19.0')}
-					${tsver('4.20.0')}
-					${tsver('4.22.4')}
-					${tsver('4.22.5')}
-					${tsver('4.22.7')}
-					${tsver('4.22.9')}
+					${tsver('1.01.1')}
 				</select>
 				<p id=theseedVersionDescription></p>
 				<p>이 설정 변경 시 반드시 엔진을 즉시 다시 시작해야 합니다.</p>

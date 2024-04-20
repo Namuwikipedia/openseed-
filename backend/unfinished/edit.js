@@ -9,7 +9,7 @@ router.all(/^\/edit\/(.*)/, async function editDocument(req, res, next) {
 		return res.status(403).send(await showError(req, err('error', { code: 'permission_read', msg: aclmsg })));
 	}
 	
-	if(!doc.title || ['특수기능', '투표', '토론'].includes(doc.namespace) || !ver('4.7.3') && doc.title.includes('://')) return res.status(400).send(await showError(req, 'invalid_title'));
+	if(!doc.title || ['특수기능', '토론'].includes(doc.namespace) || !ver('4.7.3') && doc.title.includes('://')) return res.status(400).send(await showError(req, 'invalid_title'));
 	
 	var rawContent = await curs.execute("select content from documents where title = ? and namespace = ?", [doc.title, doc.namespace]);
 	if(!rawContent[0]) rawContent = '';

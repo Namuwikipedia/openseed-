@@ -51,3 +51,4 @@
     </script>
 </body>
 </html>
+return res.send(await render(req, '게시판', content, {}, _, _, 'board'));

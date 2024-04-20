@@ -211,8 +211,8 @@ router.all(/^\/acl\/(.*)$/, async(req, res, next) => {
 											<option value="perm">권한</option>
 											<option value="member">사용자</option>
 											<option value="ip">아이피</option>
-											${ver('4.5.9') ? `<option value="geoip">GeoIP</option>` : ''}
-											${ver('4.18.0') ? `<option value="aclgroup">ACL그룹</option>` : ''}
+											<option value="geoip">GeoIP</option>
+											<option value="aclgroup">ACL그룹</option>
 										</select>
 										<select class="seed-acl-add-condition-value-perm form-control">
 											${aclpermopt}
@@ -226,7 +226,7 @@ router.all(/^\/acl\/(.*)$/, async(req, res, next) => {
 										<select class="seed-acl-add-action form-control">
 											<option value="allow">허용</option>
 											<option value="deny">거부</option>
-											${isns || !ver('4.18.0') ? '' : `<option value="gotons" selected>이름공간ACL 실행</option>`}
+											<option value="gotons" selected>이름공간ACL 실행</option>
 										</select>
 									</div>
 								</div>
@@ -240,7 +240,7 @@ router.all(/^\/acl\/(.*)$/, async(req, res, next) => {
 								</div>
 								<button type="submit" class="btn btn-primary seed-acl-add-btn">추가</button> 
 							</div>
-							${ver('4.18.0') ? '' : `<small>[*] 차단된 사용자는 포함되지 않습니다.</small>`}
+							<small>[*] 차단된 사용자는 포함되지 않습니다.</small>
 						`;
 					} content += `
 							</div>

@@ -892,12 +892,12 @@ const aclperms = {
 	any: '아무나',
 	member: '로그인된 사용자',
 	admin: '관리자',
+	member_signup_3days_ago: '가입한지 3일 지난 사용자',
 	member_signup_15days_ago: '가입한지 15일 지난 사용자',
 	suspend_account: '차단된 사용자',
 	blocked_ipacl: '차단된 아이피',
 	document_contributor: '해당 문서 기여자',
 	contributor: '위키 기여자'
-	match_username_and_document_title: '문서 제목과 사용자 이름이 일치',
 	ip: '아이피',
 	grant: 'grant',
 	aclgroup: 'aclgroup',
@@ -905,11 +905,12 @@ const aclperms = {
 	nsacl: 'nsacl',
 	login_history: 'login_history',
 	developer: '개발자',
+	match_username_and_document_title: '문서 제목과 사용자 이름이 일치',
 };
 
 // 차단된 사용자 제외 ACL 권한
 const exaclperms = [
-	'member', 'member_signup_15days_ago', 'document_contributor', 'contributor',
+	'member', 'member_signup_3days_ago', 'member_signup_15days_ago', 'document_contributor', 'contributor',
 ];
 
 // 오류메시지
